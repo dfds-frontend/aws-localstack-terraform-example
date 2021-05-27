@@ -15,4 +15,4 @@ aws --region eu-central-1 --endpoint-url=http://localhost:4566 lambda invoke --f
 ```
 
 ## Hot-swap 
-Follow in instructions in the `.env` file in order to pull the lambda function code from the local directory.
+Follow in instructions in the `.env.example` file in order to pull the lambda function code from the local directory.
