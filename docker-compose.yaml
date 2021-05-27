@@ -23,8 +23,6 @@ services:
     volumes:
       - "${TMPDIR:-/tmp/localstack}:/tmp/localstack"
       - "/var/run/docker.sock:/var/run/docker.sock"
-    networks:
-      - localstack
   -infrastructure:
     container_name: create-infrastructure
     image: alpine/terragrunt
@@ -37,10 +35,3 @@ services:
     volumes:
       - .:/project
     working_dir: /project
-    networks:
-      - localstack
-networks:
-  localstack:
-    external: false
-    driver: bridge
-    name: localstack
