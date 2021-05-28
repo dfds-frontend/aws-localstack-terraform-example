@@ -5,7 +5,7 @@ This project contains an example of how to utilize `localstack` and `terraform`(
 Run `docker-compose -f ./docker-compose.yaml up` from the root of the project.
 
 ## Check if localstack is running
-Browse to the following url `http://localhost:4566/health` and you should be able to inspect which services is currently started in `localstack`
+Browse to the following url `http://localhost:4566/health` and you should be able to inspect which services are currently started in `localstack`
 
 ## Invoking the `hello` lambda
 Ensure that you have the aws cli installed first and then run the following command.
