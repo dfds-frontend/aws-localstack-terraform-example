@@ -8,7 +8,14 @@ Run `docker-compose -f ./docker-compose.yaml up` from the root of the project.
 Browse to the following url `http://localhost:4566/health` and you should be able to inspect which services are currently started in `localstack`
 
 ## Invoking the `hello` lambda
-Ensure that you have the aws cli installed first and then run the following command.
+
+Using curl:
+
+```bash
+curl -X POST http://localhost:4566/2015-03-31/functions/hello/invocations
+```
+
+Using aws cli:
 
 ```bash
 aws --region eu-central-1 --endpoint-url=http://localhost:4566 lambda invoke --function hello --payload '{}' output.json
